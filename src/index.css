@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 12%;
+
+    --primary: 210 78% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 30% 94%;
+    --secondary-foreground: 210 60% 30%;
+
+    --muted: 210 18% 95%;
+    --muted-foreground: 215 15% 46%;
+
+    --accent: 168 70% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 18% 90%;
+    --input: 214 18% 90%;
+    --ring: 210 78% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 78% 38%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 210 78% 38%;
+    --sidebar-accent: 210 78% 45%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 78% 45%;
+    --sidebar-ring: 0 0% 100%;
+
+    --success: 152 60% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 210 78% 50%;
+    --info-foreground: 0 0% 100%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(210, 78%, 50%), hsl(175, 65%, 42%));
+    --gradient-header: linear-gradient(135deg, hsl(210, 78%, 48%), hsl(175, 60%, 44%));
+    --gradient-accent: linear-gradient(135deg, hsl(168, 70%, 42%), hsl(152, 60%, 38%));
+  }
+
+  .dark {
+    --background: 215 28% 8%;
+    --foreground: 210 20% 95%;
+    --card: 215 28% 11%;
+    --card-foreground: 210 20% 95%;
+    --popover: 215 28% 11%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 210 78% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 28% 16%;
+    --secondary-foreground: 210 20% 88%;
+    --muted: 215 28% 16%;
+    --muted-foreground: 215 15% 58%;
+    --accent: 168 70% 42%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 28% 18%;
+    --input: 215 28% 18%;
+    --ring: 210 78% 52%;
+    --sidebar-background: 215 28% 6%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 210 78% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 28% 14%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 215 28% 14%;
+    --sidebar-ring: 210 78% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-header {
+    background: var(--gradient-header);
+  }
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
